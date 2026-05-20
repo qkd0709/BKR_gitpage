@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineering Portfolio - 나만의 아카데믹 스페이스</title>
+    <meta name="description" content="인공지능 공학을 전공하는 인재의 학업 기록, 보유 기술, 핵심 프로젝트 및 커리어 목표를 정리한 포트폴리오 사이트입니다.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mouse Glow Effect Background -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">ACADEMIC<span>PORTFOLIO</span></div>
+            <div class="nav-links">
+                <a href="#about">자기소개</a>
+                <a href="#education">학력</a>
+                <a href="#skills">기술 스택</a>
+                <a href="#projects">프로젝트</a>
+                <a href="#experience">경험/활동</a>
+                <a href="#career-cv">로드맵 & 이력서</a>
+                <a href="#contact">연락처</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="hero-bg">
+            <img src="git_hero_background_1778648820132.png" alt="Background Space">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="avatar-container fade-in">
+                <img src="avatar.png" alt="Profile Avatar" class="avatar">
+            </div>
+            <h1 class="fade-in-delayed">인공지능 공학도 <span class="highlight">[홍길동]</span></h1>
+            <p class="fade-in-delayed">Computer Vision, Natural Language Processing, Data Analysis에 관심이 많으며,<br>지속 가능한 가치를 만드는 AI 서비스 개발자 및 연구자를 꿈꿉니다.</p>
+            <div class="hero-btns fade-in-delayed">
+                <a href="#projects" class="btn primary">프로젝트 확인</a>
+                <a href="#career-cv" class="btn secondary">이력서 받기</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. 자기소개 / About Me -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">자기소개 / About Me</h2>
+            <div class="about-grid">
+                <div class="card intro-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>나의 지향점</h3>
+                    <p class="intro-text">
+                        조선대학교 인공지능공학과를 다니고 있는 학부생입니다. 실세계 문제를 지능형 모델로 정의하고 해결하는 <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong> 및 <strong>Data Analysis</strong> 분야에 강한 학구열을 가지고 있습니다. 최신 연구 트렌드를 실제 돌아가는 웹 서비스로 구현하는 과정을 좋아합니다.
+                    </p>
+                    <p class="intro-subtext">
+                        "새로운 이론을 아는 것에 그치지 않고 프로덕트 수준의 코드로 실현해낼 수 있는 실전형 인재로 나아갑니다."
+                    </p>
+                </div>
+                <div class="card details-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>포커스 영역</h3>
+                    <ul class="interest-list">
+                        <li><strong>전공 분야:</strong> 인공지능공학 (Department of Artificial Intelligence Engineering)</li>
+                        <li><strong>학습 및 관심 기술:</strong> PyTorch, Deep Learning Models (CNN, RNN, Transformers), Python</li>
+                        <li><strong>AI 연구 주제:</strong> Generative AI, MLOps, Efficient Neural Networks</li>
+                        <li><strong>목표 진로:</strong> AI 서비스 개발자 (AI Product Developer), 인공지능 연구자 (AI Researcher)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Education -->
+        <section id="education" class="content-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-container">
+                <div class="card education-card">
+                    <div class="education-header">
+                        <div class="edu-info">
+                            <span class="edu-institution">Chosun University</span>
+                            <h3>Department of Artificial Intelligence Engineering</h3>
+                            <p class="edu-meta">재학 기간: 2024.03 - 현재 (3학년 재학 중)</p>
+                        </div>
+                        <div class="gpa-container">
+                            <div class="gpa-ring">
+                                <span class="gpa-score">4.1</span>
+                                <span class="gpa-scale">/ 4.5</span>
+                            </div>
+                            <span class="gpa-text">Academic GPA</span>
+                        </div>
+                    </div>
+                    <div class="coursework-section">
+                        <h4>주요 수강 과목 (Relevant Coursework)</h4>
+                        <div class="coursework-tags">
+                            <span>Machine Learning</span>
+                            <span>Deep Learning</span>
+                            <span>Data Structures</span>
+                            <span>Web Programming</span>
+                            <span>Database Design</span>
+                            <span>Algorithm Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills -->
+        <section id="skills" class="content-section">
+            <h2 class="section-title">Skills & Competencies</h2>
+            <div class="skills-grid">
+                <!-- Programming -->
+                <div class="card skill-card">
+                    <div class="skill-category-title">💻 Programming</div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span class="level">Intermediate</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="55%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>C/C++</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI / ML -->
+                <div class="card skill-card">
+                    <div class="skill-category-title">🤖 AI / ML</div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>PyTorch</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>TensorFlow</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>scikit-learn</span>
+                                <span class="level">Intermediate</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web & Database -->
+                <div class="card skill-card">
+                    <div class="skill-category-title">🌐 Web & DB</div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span class="level">Expert</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>React</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MySQL / SQLite</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="card skill-card">
+                    <div class="skill-category-title">🛠️ Tools</div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Git & GitHub</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>VS Code</span>
+                                <span class="level">Intermediate</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Docker</span>
+                                <span class="level">Basic</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects -->
+        <section id="projects" class="content-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="card project-card">
+                    <div class="project-header">
+                        <div class="project-tags">
+                            <span class="p-badge ai">AI / CV</span>
+                            <span class="p-status">진행 완료</span>
+                        </div>
+                        <h3>AI 기반 실시간 사물 인식 및 가시화 대시보드</h3>
+                        <p class="project-period">🗓️ 2026.01 - 2026.02 (2개월)</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-summary"><strong>한 줄 요약:</strong> 웹캠 영상을 실시간으로 분석해 사물을 분류 및 탐지하고 메트릭을 추적하는 PyTorch 기반 시스템</p>
+                        <ul class="project-details">
+                            <li><strong>본인 역할:</strong> PyTorch 기반 YOLOv8 경량화 및 React 기반 데이터 스트리밍 가시화 웹 대시보드 메인 개발</li>
+                            <li><strong>핵심 기능:</strong> 실시간 객체 카운팅 모니터링, 추론 정확도 임계치 설정, 특정 물체 감지 시 로깅 알림</li>
+                            <li><strong>성과/결과:</strong> 초당 프레임 수(FPS) 35 이상의 고속 객체 탐지 속도 달성, 평균 정밀도(mAP) 92.6% 기록</li>
+                        </ul>
+                        <div class="tech-stack-container">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>React</span>
+                            <span>Flask</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/username/realtime-yolo-dashboard" target="_blank" class="btn secondary link-btn">GitHub</a>
+                        <a href="#" class="btn primary link-btn">Demo / Image</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card project-card">
+                    <div class="project-header">
+                        <div class="project-tags">
+                            <span class="p-badge web">Web / React</span>
+                            <span class="p-status building">진행 중</span>
+                        </div>
+                        <h3>나만의 학업 아카데믹 스페이스 및 CV 대시보드</h3>
+                        <p class="project-period">🗓️ 2026.04 - 2026.05 (진행 중)</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-summary"><strong>한 줄 요약:</strong> 개인의 수강 과목, 이력서, 기술 숙련도를 시각적으로 추적하고 관리할 수 있는 아카데믹 스페이스 사이트</p>
+                        <ul class="project-details">
+                            <li><strong>본인 역할:</strong> 기획 및 Vanilla HTML/CSS/JS 설계, 인터랙티브 이펙트 개발 100% 개인 수행</li>
+                            <li><strong>핵심 기능:</strong> 마우스 추적 글로우 이펙트, 스크롤 연동 페이드인 인터랙션, 스택 로드 애니메이션, 모바일 반응형</li>
+                            <li><strong>성과/결과:</strong> 기획된 8개 CV 섹션 통합, 모바일/태블릿 반응형 시각적 최적화 및 98점대 성능 최적화</li>
+                        </ul>
+                        <div class="tech-stack-container">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Vanilla JS</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/username/academic-portfolio" target="_blank" class="btn secondary link-btn">GitHub</a>
+                        <a href="#" class="btn primary link-btn">Demo / Image</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Experience -->
+        <section id="experience" class="content-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <span class="timeline-date">2025.09 - 현재</span>
+                        <h3>AI Lab 학부생 인턴 (Undergraduate Intern)</h3>
+                        <p class="timeline-role">🏫 조선대학교 인공지능 연구소</p>
+                        <p class="timeline-desc">
+                            학내 인공지능 비전 연구실에서 학부 인턴으로 소속되어 세미나 및 논문 리뷰(Object Detection, Transformer 관련)를 진행 중입니다. 커스텀 데이터 전처리 연구를 보조하고 있습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <span class="timeline-date">2024.03 - 현재</span>
+                        <h3>학술 컴퓨터 동아리 활동 (Programming Club Member)</h3>
+                        <p class="timeline-role">💻 컴퓨터 및 AI 연구 학술 동아리</p>
+                        <p class="timeline-desc">
+                            매주 백준/프로그래머스 문제 풀이 스터디에 주도적으로 임하고 있으며, 타과 학생들과 융합 해커톤을 위한 웹 데모 프로젝트 개발팀을 꾸려 협업을 하고 있습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <span class="timeline-date">2025.09 - 2025.12</span>
+                        <h3>캡스톤 디자인 팀 프로젝트 (Capstone Design Team Project)</h3>
+                        <p class="timeline-role">🏆 AI 연동 교육 지원 서비스 팀 개발</p>
+                        <p class="timeline-desc">
+                            생성형 언어 모델 API와 문장 요약 기술을 접목한 시각 장애 학생용 자막 요약 플랫폼을 구축했으며, 2학기 공학 경진대회에서 창의작품 부문 장려상을 입상했습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <span class="timeline-date">2025.07</span>
+                        <h3>대학 연합 AI 아이디어톤 참가 (AI Competition Participant)</h3>
+                        <p class="timeline-role">💡 의료 데이터 예측 모델 제안팀</p>
+                        <p class="timeline-desc">
+                            지역 내외 대학 연합으로 주관된 단기 AI 챌린지에 참가하여, 흉부 X-ray 분석을 통한 질환 가능성 예측 아이디어 기획 및 데이터 탐색을 맡아 우수 참가 아이디어에 선정되었습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Career Goal / Future Plan & CV / Resume PDF -->
+        <section id="career-cv" class="content-section">
+            <div class="career-cv-grid">
+                <!-- 8. Career Goal / Future Plan -->
+                <div class="card career-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Career Goal & Future Plan</h3>
+                    <p class="card-desc">인공지능 분야의 핵심 동력이 되기 위한 로드맵입니다.</p>
+                    <div class="pathway">
+                        <div class="pathway-item">
+                            <span class="path-num">01</span>
+                            <div class="path-details">
+                                <h4>AI Developer</h4>
+                                <p>딥러닝 모델의 프로덕션 서빙, MLOps 파이프라인 구축 및 API화 역량 강화</p>
+                            </div>
+                        </div>
+                        <div class="pathway-item">
+                            <span class="path-num">02</span>
+                            <div class="path-details">
+                                <h4>Data Scientist</h4>
+                                <p>복잡하고 거친 데이터셋에서 특징을 추출하고, 비즈니스 문제 해결을 위한 최적 통계 모델 설계</p>
+                            </div>
+                        </div>
+                        <div class="pathway-item">
+                            <span class="path-num">03</span>
+                            <div class="path-details">
+                                <h4>Computer Vision Engineer</h4>
+                                <p>의료, 제조, 자율주행 등 고부가가치 비전 인식 솔루션의 고속 신경망 설계</p>
+                            </div>
+                        </div>
+                        <div class="pathway-item">
+                            <span class="path-num">04</span>
+                            <div class="path-details">
+                                <h4>Graduate School / Research Track</h4>
+                                <p>대학원 진학 및 선도 연구소 연구 참관을 통해 AI의 한계를 확장시키는 신규 아키텍처 연구</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. CV / Resume PDF -->
+                <div class="card cv-card">
+                    <div class="card-icon">📄</div>
+                    <h3>Curriculum Vitae</h3>
+                    <p class="card-desc">상세한 연구 실적 및 학술 활동 등이 요약된 공식 이력서 파일입니다.</p>
+                    
+                    <div class="download-container">
+                        <div class="pdf-box">
+                            <div class="pdf-icon">📂</div>
+                            <div class="pdf-info">
+                                <span class="pdf-title">resume.pdf</span>
+                                <span class="pdf-meta">A4 • PDF Format • 1.15 MB</span>
+                            </div>
+                        </div>
+                        <a href="./resume.pdf" download="resume.pdf" class="btn primary cv-download-btn">Download Resume PDF</a>
+                    </div>
+
+                    <div class="security-warning">
+                        <span class="warning-icon">⚠️</span>
+                        <div class="warning-text">
+                            <strong>개인정보 보안 가이드 준수</strong>
+                            <p>공개 다운로드되는 해당 PDF 이력서에는 주민등록번호, 상세 거주지 주소, 전화번호 등 민감할 수 있는 중요 식별 정보가 철저히 삭제 및 마스킹 처리되어 있어 안심하고 조회하실 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact & Networks</h2>
+            <div class="contact-grid">
+                <!-- Contact Item 1: Email -->
+                <div class="card contact-card">
+                    <div class="card-icon">✉️</div>
+                    <h3>Email Address</h3>
+                    <p class="contact-desc">프로젝트 의뢰 및 협업 관련 연락은 이메일이 가장 빠릅니다.</p>
+                    <div class="code-box">
+                        <code>student@example.com</code>
+                        <button class="copy-btn">Copy</button>
+                    </div>
+                </div>
+
+                <!-- Contact Item 2: GitHub -->
+                <div class="card contact-card">
+                    <div class="card-icon">💻</div>
+                    <h3>GitHub Profile</h3>
+                    <p class="contact-desc">개발 소스코드 및 알고리즘 1일 1커밋 저장소입니다.</p>
+                    <a href="https://github.com/username" target="_blank" class="btn secondary block-btn">Visit GitHub</a>
+                </div>
+
+                <!-- Contact Item 3: Social/Blog -->
+                <div class="card contact-card">
+                    <div class="card-icon">🔗</div>
+                    <h3>LinkedIn & Blog</h3>
+                    <p class="contact-desc">커리어 네트워킹과 기술 기록 및 개인 학습 기록용 블로그입니다.</p>
+                    <div class="btn-group">
+                        <a href="https://linkedin.com" target="_blank" class="btn secondary flex-btn">LinkedIn</a>
+                        <a href="https://notion.so" target="_blank" class="btn secondary flex-btn">Notion / Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Let's build something <span class="highlight">intelligent</span>.</h2>
+            <p>&copy; 2026 Academic Space & CV Portfolio. Designed with high-performance CSS grid.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
