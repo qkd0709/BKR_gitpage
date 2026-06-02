@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방경록 | 인공지능공학 전공 이력서</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+
+        /* 인쇄 최적화 스타일 (PDF 저장 시 깔끔하게 1~2장으로 맞춤) */
+        @media print {
+
+            /* 브라우저 기본 마진 제거 및 A4 규격 설정 (상하 여백을 10mm로 조절하여 추가 공간 확보) */
+            @page {
+                size: A4;
+                margin: 10mm 15mm 10mm 15mm;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+                font-size: 10.5px !important;
+                /* 전체 글자 크기를 살짝 줄여 여유 공간 마련 */
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* 화면용 UI 숨김 */
+            .no-print {
+                display: none !important;
+            }
+
+            /* 그림자 제거 및 외곽선 조정 */
+            .print-shadow-none {
+                box-shadow: none !important;
+            }
+
+            .print-border {
+                border: none !important;
+            }
+
+            /* 헤더 인쇄 최적화 (흰 배경에 검은 글씨로 변경하여 가독성 확보) */
+            header {
+                background-color: transparent !important;
+                color: #0f172a !important;
+                border-bottom: 2px solid #cbd5e1 !important;
+                padding: 0 0 1rem 0 !important;
+                margin-bottom: 1.25rem !important;
+            }
+
+            header h1 {
+                color: #0f172a !important;
+            }
+
+            header p {
+                color: #334155 !important;
+            }
+
+            /* 소속 태그 색상 반전 */
+            header .inline-flex {
+                background-color: #f1f5f9 !important;
+                color: #1e3a8a !important;
+                border-color: #cbd5e1 !important;
+            }
+
+            /* 연락처 정보 텍스트 컬러 조정 */
+            header .contact-info,
+            header .contact-info a,
+            header .contact-info span {
+                color: #475569 !important;
+            }
+
+            /* 바디 패딩 및 간격 조정 */
+            div.p-8.sm\:p-10 {
+                padding: 0 !important;
+            }
+
+            .space-y-10> :not([hidden])~ :not([hidden]) {
+                margin-top: 1.25rem !important;
+                /* 섹션 간 마진 축소 */
+            }
+
+            /* 섹션 제목 스타일 복구 */
+            section {
+                margin-bottom: 1.25rem !important;
+            }
+
+            section h2 {
+                color: #0f172a !important;
+                border-color: #cbd5e1 !important;
+            }
+
+            svg {
+                color: #2563eb !important;
+            }
+
+            /* 학력 카드 */
+            .bg-slate-50 {
+                background-color: #f8fafc !important;
+                border-color: #e2e8f0 !important;
+            }
+
+            .text-slate-900 {
+                color: #0f172a !important;
+            }
+
+            .text-slate-600 {
+                color: #334155 !important;
+            }
+
+            .bg-white {
+                background-color: #ffffff !important;
+            }
+
+            .shadow-sm,
+            .shadow-md,
+            .shadow-xl {
+                box-shadow: none !important;
+            }
+
+            /* 기술 스택 카드 */
+            .border-slate-150 {
+                border-color: #e2e8f0 !important;
+            }
+
+            .bg-slate-100 {
+                background-color: #f1f5f9 !important;
+                color: #334155 !important;
+            }
+
+            /* 프로젝트 페이지로 강제 줄바꿈 설정 (1페이지: 학력/기술, 2페이지: 프로젝트/비전) */
+            .page-break {
+                page-break-before: always !important;
+                margin-top: 0 !important;
+                padding-top: 0.5rem !important;
+            }
+
+            .project-card {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+                border-color: #cbd5e1 !important;
+                background-color: #ffffff !important;
+                margin-bottom: 0.75rem !important;
+                /* 프로젝트 카드 간 마진 축소 */
+                padding: 0.75rem !important;
+                /* 카드 내부 패딩 축소 */
+            }
+
+            .space-y-6> :not([hidden])~ :not([hidden]) {
+                margin-top: 0.5rem !important;
+            }
+
+            /* 커리어 비전 카드 간격 및 보더 설정 */
+            .grid {
+                gap: 0.5rem !important;
+            }
+
+            .grid>div {
+                border-color: #e2e8f0 !important;
+                background-color: #f8fafc !important;
+                padding: 0.5rem !important;
+                /* 비전 카드 내부 패딩 축소 */
+            }
+
+            /* 푸터 */
+            footer {
+                margin-top: 1rem !important;
+                /* 푸터 마진 축소 */
+                padding: 0.5rem 0 0 0 !important;
+                background-color: transparent !important;
+                border-top: 1px solid #e2e8f0 !important;
+                color: #64748b !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+
+    <!-- 메인 이력서 컨테이너 -->
+    <div
+        class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden print-shadow-none print-border">
+
+        <!-- PDF 인쇄 제어 및 플로팅 가이드 (화면에서만 보임) -->
+        <div
+            class="no-print bg-gradient-to-r from-brand-600 to-indigo-700 text-white px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-xs sm:text-sm font-medium">우측 버튼을 누르면 이력서가 깔끔한 A4 규격 PDF로 인쇄/저장됩니다.</span>
+            </div>
+            <button onclick="window.print()"
+                class="bg-white text-brand-700 hover:bg-brand-50 transition-colors px-4 py-1.5 rounded-lg text-xs font-semibold shadow-md flex items-center space-x-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z">
+                    </path>
+                </svg>
+                <span>PDF 저장 / 인쇄</span>
+            </button>
+        </div>
+
+        <!-- 헤더 섹션 (이름, 핵심 비전, 연락처) -->
+        <header class="p-8 sm:p-10 border-b border-slate-100 bg-slate-900 text-white relative">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
+                <div>
+                    <!-- 소속 및 신분 -->
+                    <div
+                        class="inline-flex items-center space-x-2 bg-brand-600/30 text-brand-300 border border-brand-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+                        <span>Chosun University</span>
+                        <span class="w-1 h-1 bg-brand-400 rounded-full"></span>
+                        <span>AI Engineering Major</span>
+                    </div>
+                    <!-- 이름 -->
+                    <h1 class="text-4xl sm:text-5xl font-black tracking-tight mb-2">방경록</h1>
+                    <!-- 슬로건 -->
+                    <p class="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-2xl">
+                        AI 비서, AI 보안, IoT 분야의 유기적인 융합을 꿈꾸며, 오프라인 환경에서도 안전하고 신속하게 구동되는 <span
+                            class="text-white font-semibold">온디바이스 AI(On-Device AI)</span> 기술을 깊이 있게 연구하는 예비 엔지니어입니다.
+                    </p>
+                </div>
+
+                <!-- 연락처 채널 -->
+                <div class="flex flex-col space-y-2.5 text-xs sm:text-sm text-slate-300 min-w-[240px] md:text-right">
+                    <!-- 이메일 -->
+                    <a href="mailto:qkd0709@naver.com"
+                        class="flex items-center md:justify-end space-x-2 hover:text-brand-400 transition-colors">
+                        <span>qkd0709@naver.com</span>
+                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/qkd0709" target="_blank"
+                        class="flex items-center md:justify-end space-x-2 hover:text-brand-400 transition-colors">
+                        <span>github.com/qkd0709</span>
+                        <svg class="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z">
+                            </path>
+                        </svg>
+                    </a>
+                    <!-- 포트폴리오 -->
+                    <span class="flex items-center md:justify-end space-x-2 text-brand-400 font-semibold">
+                        <span>포트폴리오: 준비 및 업데이트 중</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 바디 본문 영역 -->
+        <div class="p-8 sm:p-10 space-y-10">
+
+            <!-- 1. 학력 정보 (Education) -->
+            <section>
+                <div class="flex items-center space-x-2 border-b border-slate-200 pb-2 mb-4">
+                    <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+                        </path>
+                    </svg>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-900">학력 (Education)</h2>
+                </div>
+                <div
+                    class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-slate-50 p-4 rounded-xl border border-slate-100 print-shadow-none">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">조선대학교 (Chosun University)</h3>
+                        <p class="text-slate-600 text-sm">IT융합대학 인공지능공학과 (학사과정 재학)</p>
+                    </div>
+                    <div class="mt-2 sm:mt-0 sm:text-right">
+                        <span
+                            class="inline-block bg-brand-100 text-brand-800 text-xs px-2.5 py-1 rounded-full font-bold mb-1">전공
+                            평점: 3.95 / 4.5</span>
+                        <p class="text-slate-500 text-xs">2023.03 ~ 현재 (2학년 재학 중)</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">주요 수강 및 이수 과목</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="bg-white border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">인공지능
+                            개론</span>
+                        <span
+                            class="bg-white border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">AI
+                            프로그래밍 실습</span>
+                        <span
+                            class="bg-white border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">기계학습
+                            (Machine Learning)</span>
+                        <span
+                            class="bg-white border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">객체지향프로그래밍
+                            (C/C++)</span>
+                        <span
+                            class="bg-white border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">데이터
+                            구조</span>
+                        <span
+                            class="bg-white border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">오픈소스소프트웨어
+                            (OSS) 개론</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 기술 스택 (Technical Skills) -->
+            <section>
+                <div class="flex items-center space-x-2 border-b border-slate-200 pb-2 mb-4">
+                    <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-900">기술 스택 (Skills)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 프로그래밍 언어 -->
+                    <div class="border border-slate-150 p-4 rounded-xl bg-white shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-900 mb-3 flex items-center space-x-1.5">
+                            <span class="w-1.5 h-3 bg-brand-600 rounded-full"></span>
+                            <span>Programming Languages</span>
+                        </h3>
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-slate-700">C / C++</span>
+                                <span class="text-xs text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">객체지향 프로그래밍
+                                    기초 구현 가능</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-slate-700">Python</span>
+                                <span class="text-xs text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">데이터 처리 및
+                                    API 연동 활용 가능</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 개발 도구 및 플랫폼 -->
+                    <div class="border border-slate-150 p-4 rounded-xl bg-white shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-900 mb-3 flex items-center space-x-1.5">
+                            <span class="w-1.5 h-3 bg-brand-600 rounded-full"></span>
+                            <span>Tools & DevOps</span>
+                        </h3>
+                        <ul class="space-y-2.5">
+                            <li class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-slate-700">Git & GitHub</span>
+                                <span class="text-xs text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">형상 관리 및 코드
+                                    리포지토리 운영</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-slate-700">Streamlit</span>
+                                <span class="text-xs text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">Python 기반 웹
+                                    대시보드 프로토타이핑</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 핵심 프로젝트 경험 (Projects) -->
+            <section class="page-break">
+                <div class="flex items-center space-x-2 border-b border-slate-200 pb-2 mb-4">
+                    <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                        </path>
+                    </svg>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-900">프로젝트 경험 (Projects)</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- 프로젝트 1 -->
+                    <div
+                        class="project-card border border-slate-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3">
+                            <div>
+                                <span
+                                    class="inline-block bg-emerald-50 text-emerald-700 text-[10px] font-semibold px-2 py-0.5 rounded-md border border-emerald-200 mb-1">진행
+                                    중 (In-Progress)</span>
+                                <h3 class="text-lg font-bold text-slate-900">생성형 AI 대화형 챗봇 개발</h3>
+                            </div>
+                            <span
+                                class="text-xs font-semibold text-slate-400 bg-slate-50 px-3 py-1 rounded-md border border-slate-100">현재
+                                진행 중 ~ 2026.12 예정</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                            OpenAI API 및 오픈소스 초거대 언어 모델(LLM)을 활용하여 사용자의 다양한 문맥상 질문에 실시간으로 풍부하고 친근하게 답변하는 고도화된 챗봇 솔루션입니다.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="text-xs">
+                                <span class="font-bold text-slate-700 block mb-1">담당 역할 및 기여</span>
+                                <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                    <li>Python 기반 OpenAI API 연동 백엔드 로직 설계 및 비동기 처리 구현</li>
+                                    <li>Streamlit의 <code
+                                            class="bg-slate-100 text-brand-700 px-1 py-0.5 rounded">Session State</code>
+                                        객체를 활용한 이전 대화 메모리 보존 모듈 설계</li>
+                                    <li>프롬프트 엔지니어링 설계를 통한 답변 품질 향상 및 친밀한 대화 컨텍스트 구축</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">Python</span>
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">Streamlit</span>
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">OpenAI
+                                    API</span>
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 2 -->
+                    <div
+                        class="project-card border border-slate-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3">
+                            <div>
+                                <span
+                                    class="inline-block bg-blue-50 text-blue-700 text-[10px] font-semibold px-2 py-0.5 rounded-md border border-blue-200 mb-1">진행
+                                    예정 (Planned)</span>
+                                <h3 class="text-lg font-bold text-slate-900">PDF 전공 교재 핵심 요약 및 시맨틱 텍스트 분석기</h3>
+                            </div>
+                            <span
+                                class="text-xs font-semibold text-slate-400 bg-slate-50 px-3 py-1 rounded-md border border-slate-100">착수
+                                예정 ~ 2026.12 예정</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                            학습의 능률을 돕기 위해 복잡한 전공서적 PDF 파일을 업로드하면 정밀 텍스트 파싱을 거쳐 문서 내 핵심 키워드를 추출하고, 최적화된 문단 요약 서비스를 제안하는
+                            한국어 기반 텍스트 요약 시스템입니다.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="text-xs">
+                                <span class="font-bold text-slate-700 block mb-1">담당 역할 및 구현 설계</span>
+                                <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                    <li>PyPDF 및 다양한 텍스트 추출 엔진을 활용한 한국어/영어 혼용 문서 전처리 기획</li>
+                                    <li>KoBART와 같은 최적화된 사전학습 NLP 모델을 활용한 텍스트 요약 성능 고도화 설계</li>
+                                    <li>HuggingFace 모델 임포트 및 효율적인 로컬 서빙 아키텍처 제안</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">Python</span>
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">PyPDF</span>
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">KoBART
+                                    (NLP)</span>
+                                <span
+                                    class="bg-slate-100 text-slate-700 text-[10px] px-2.5 py-1 rounded-md font-medium">HuggingFace</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 커리어 목표 및 비전 (Career Goals) -->
+            <section>
+                <div class="flex items-center space-x-2 border-b border-slate-200 pb-2 mb-4">
+                    <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h2 class="text-xl font-bold tracking-tight text-slate-900">커리어 목표 및 비전 (Career Goals)</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <!-- 목표 1 -->
+                    <div
+                        class="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <div class="flex items-center space-x-2.5 mb-2">
+                            <span
+                                class="w-7 h-7 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-bold">01</span>
+                            <h3 class="font-bold text-slate-900 text-sm">AI Assistant Developer</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            LLM 에이전트 설계 역량을 함양하여, 정교한 멀티모달 상호작용이 가능한 지능형 맞춤형 개인 비서 아키텍처를 연구하고 개발합니다.
+                        </p>
+                    </div>
+
+                    <!-- 목표 2 -->
+                    <div
+                        class="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <div class="flex items-center space-x-2.5 mb-2">
+                            <span
+                                class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-bold">02</span>
+                            <h3 class="font-bold text-slate-900 text-sm">AI Security Specialist</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            점차 고도화되는 AI 모델 공격(적대적 공격, 탈옥 등) 방어책을 수립하고, 프라이버시 보호 연합학습(Federated Learning)의 취약성을 보강하는 연구를
+                            진행합니다.
+                        </p>
+                    </div>
+
+                    <!-- 목표 3 -->
+                    <div
+                        class="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <div class="flex items-center space-x-2.5 mb-2">
+                            <span
+                                class="w-7 h-7 rounded-lg bg-violet-100 text-violet-700 flex items-center justify-center text-xs font-bold">03</span>
+                            <h3 class="font-bold text-slate-900 text-sm">Smart IoT Systems Engineer</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            다양한 센서 네트워크 데이터를 실시간 처리하며, 엣지 환경(Edge-AI)에서의 저전력 초고속 데이터 융합 및 실시간 제어 최적화 기술을 선도합니다.
+                        </p>
+                    </div>
+
+                    <!-- 목표 4 -->
+                    <div
+                        class="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <div class="flex items-center space-x-2.5 mb-2">
+                            <span
+                                class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">04</span>
+                            <h3 class="font-bold text-slate-900 text-sm">On-Device AI Researcher</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            가장 관심이 깊은 고도 연구 분야로서, 모델 경량화/양자화를 구현하여 외부 서버 연결이 차단된 오프라인 단말기 환경에서도 안전하고 빠른 추론이 가능한 시스템을
+                            개발합니다.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="bg-slate-50 py-6 px-8 text-center text-xs text-slate-400 border-t border-slate-100">
+            <p class="mb-1">본 이력서는 HTML/CSS(Tailwind) 기반으로 반응형 웹 뷰 및 PDF 출력을 모두 고려하여 개발되었습니다.</p>
+            <p>&copy; 2026 방경록. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

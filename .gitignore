@@ -1,1 +1,13 @@
+# OS metadata files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project files
 *.md
